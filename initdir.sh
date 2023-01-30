@@ -39,7 +39,7 @@ if [ -e "${homedir}" ]; then
 	# Already exists, check permissions
 	r_uid=$(stat -c %u ${homedir})
 	r_gid=$(stat -c %g ${homedir})
-	r_mode=$(stat 0c %a ${homedir})
+	r_mode=$(stat -c %a ${homedir})
 	if [ "${r_uid}" -ne "${EXTERNAL_UID}" ]; then
 	   printf "${homedir} exists but is owned by ${r_uid} " 1>&2
 	   printf "not ${EXTERNAL_UID}" 1>&2
