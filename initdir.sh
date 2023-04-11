@@ -30,7 +30,7 @@ if [ -n "${HOMEDIR_OVERRIDE}" ]; then
     homedirs="${HOMEDIR_OVERRIDE}"
 fi
 
-homedir="${homedirs}/{$JUPYTERHUB_USER}"
+homedir="${homedirs}/${JUPYTERHUB_USER}"
 if [ -e "${homedir}" ]; then
     if [ ! -d "${homedir}" ]; then
 	printf "${homedir} exists but is not a directory.\n" 1>&2
