@@ -16,6 +16,16 @@ name: CI
   pull_request: {}
 
 jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+    - name: test
+      shell: bash
+      run: |
+        ./tests/test_initdir.sh
+
   build:
     runs-on: ubuntu-latest
 
