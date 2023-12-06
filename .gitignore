@@ -142,3 +142,6 @@ dmypy.json
 
 # Modified to set up the local development server.
 /examples/secrets/github-client-secret
+
+# Mac desktop stuff
+.DS_Store

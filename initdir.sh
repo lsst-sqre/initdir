@@ -74,8 +74,8 @@ if [ -e "${HOMEDIR}" ]; then
         fi
     fi
 else
-    # It doesn't exist.  Create it.
+    # It doesn't exist.  Create it.  Force mode 700 with umask.
+    umask 077
     mkdir -p "${HOMEDIR}"
-    chmod 700 "${HOMEDIR}"
     chown "${EXTERNAL_UID}:${EXTERNAL_GID}" "${HOMEDIR}"
 fi
